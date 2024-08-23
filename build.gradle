@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group = 'kz.jusan'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.wicket:wicket-core:9.15.0'
+    implementation 'org.apache.wicket:wicket-extensions:9.15.0'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+
+
+
+//    testImplementation platform('org.junit:junit-bom:5.10.0')
+//    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+war {
+    archiveFileName = 'loan-calculator-app.war'
+    webAppDirName = file('src/main/webapp')
+}
+
+//test {
+//    useJUnitPlatform()
+//}

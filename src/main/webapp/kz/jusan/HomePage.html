@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Кредитный Калькулятор</title>
+</head>
+<body>
+    <h1 wicket:id="message"></h1>
+    <form wicket:id="form">
+        <div wicket:id="feedback"></div>
+        <div>
+            <label for="dateOfLoanIssue">Дата выдачи кредита:</label>
+            <input wicket:id="dateOfLoan" type="date" name="date">
+        </div>
+        <div>
+            <label for="loanTermInMonths">Срок кредита в мес:</label>
+            <input wicket:id="loanTerm" type="number" name="term">
+        </div>
+        <div>
+            <label for="loanAmount">Сумма кредита:</label>
+            <input wicket:id="loanAmount" type="number" name="amount">
+        </div>
+        <div>
+            <label for="interestRate">Процентная ставка:</label>
+            <input wicket:id="interestRate" type="number" name="interestRate">
+        </div>
+        <button wicket:id="submit" type="submit">Рассчитать</button>
+    </form>
+
+    <div>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>№</th>
+                <th>Дата платежа</th>
+                <th>Количество дней</th>
+                <th>Сумма основного долга</th>
+                <th>Начисленные проценты</th>
+                <th>Остаток ОД</th>
+                <th>Сумма платежа</th>
+            </tr>
+            </thead>
+            <tbody wicket:id="rows">
+            <tr>
+                <td wicket:id="id"></td>
+                <td wicket:id="paymentDate"></td>
+                <td wicket:id="numberOfDays"></td>
+                <td wicket:id="principalDebt"></td>
+                <td wicket:id="interest"></td>
+                <td wicket:id="remaining"></td>
+                <td wicket:id="paymentAmount"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
